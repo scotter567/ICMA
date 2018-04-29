@@ -6,6 +6,8 @@ create table users(
 
 user_id	int	primary key	auto_increment,
 username varchar(255) not null unique,
+name_first varchar(255)not null,
+name_last varchar(255)not null,
 password_str varchar(255) not null,
 email_address varchar(255) not null unique,
 phone varchar(12) not null unique,
@@ -28,3 +30,6 @@ market_value decimal(10,2) not null default 0.00,
 number_of_shares int not null default 0
 
 );
+
+INSERT INTO users
+VALUES(NULL,'scotter567','Jordan', 'Scott','hibob','scotter567@gmail.com','267-804-0464','1997-01-21',0);
