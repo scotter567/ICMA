@@ -54,6 +54,7 @@ echo "</table>\n";
 		  
           
           <a href="IC_Login.html"><button class="button button-block" name="logout"/>Log Out</button></a>
+		  <a href="IC_Investment.html"><button class="button button-block" name="add_invest"/>Add Investment</button></a>
 
     </div>
     
