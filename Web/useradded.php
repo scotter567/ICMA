@@ -4,10 +4,9 @@
 </head>
 <body>
 <?php
-include '../helpers.php';
+include ('../mysqli_connect.php');
 
 if(isset($_POST['submit'])){
-	
 	$data_missing = array();
 	
 	if(empty($_POST['name_first'])){
@@ -21,7 +20,7 @@ if(isset($_POST['submit'])){
 		$data_miss[] = 'Last Name';
 	} 
 	else{
-		$l_name = trim($POST['last_name']);
+		$l_name = trim($POST['name_last']);
 	}
 		
 	if(empty($_POST['email'])){
@@ -61,11 +60,10 @@ if(isset($_POST['submit'])){
 	
 		
 
-	
 	if(empty($data_missing)){
-		//require_once(../mysqli_connect.php);
 		
-		$query = "INSERT INTO user (username, name_first, name_last, password_str, email_address, phone, dob)VALUES (?, ?, ?, ?, ?, ?, ?)";
+		$query = "INSERT INTO user (username, name_first, name_last, password_str, email_address, phone, dob)
+									VALUES (?, ?, ?, ?, ?, ?, ?)";
 		
 		$stmt = mysqli($dbc, $query);
 		
@@ -102,7 +100,7 @@ if(isset($_POST['submit'])){
 
 ?>
 
-<form action="http://localhost/useradded.php" method=post>
+<form action="http://localhost/useradded.php" method="post" required>
 	
 	<b>Add a New Student</b>
 	

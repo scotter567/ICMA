@@ -19,7 +19,7 @@
     $psw = addslashes($psw);
   }
 
-  @ $db = new mysqli('localhost', 'bookorama', 'bookorama123', 'books');
+  @ $db = new mysqli('localhost', 'user_web', 'jawnskie2', 'investment_club_dbs');
 
   if (mysqli_connect_errno()) {
      echo 'Error: Could not connect to database.  Please try again later.';
