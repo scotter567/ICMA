@@ -17,13 +17,14 @@ $dbc = mysqli_connect('localhost', 'user_web', 'jawnskie2', 'investment_club_dbs
     or die('Could not connect: ' . mysqli_error());
 	
 $query = "INSERT INTO user (username, name_first, name_last, password_str, email_address, phone, dob, account_value)
-									VALUES (".$username.", ".$f_name.", ".$l_name.", ".$passwrd.", ".$email.", ".$phone.", ".$dob.", ".$acc_val.")";
-$response = @mysqli_query($dbc, $query);
+									VALUES ('$username', '$f_name', '$l_name', '$passwrd', '$email', '$phone', '$dob', '$acc_val')";
+									
+//$response = @mysqli_query($dbc, $query);
 
-if (mysqli_query($dbc, $query) === TRUE) {
+if (mysqli_query($dbc, $query)) {
     echo "New record created successfully";
 } else {
-    echo "Error: " . $dbc . "<br>" . $dbc->error;
+    echo "Error: ";
 }
 
 mysqli_close($dbc);
