@@ -11,8 +11,8 @@ $phone = $_POST["phone"];
 $dob = $_POST["dob"];
 $acc_val = $_POST["account_value"];
 
-$query = "INSERT INTO user ($username, $name_first, $name_last, $password_str, $email_address, $phone, $dob, $account_value)
-									VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+$query = "INSERT INTO user (username, name_first, name_last, password_str, email_address, phone, dob, account_value)
+									VALUES (".$username.", ".$f_name.", ".$l_name.", ".$passwrd.", ".$email.", ".$phone.", ".$dob.", ".$acc_val.")";
 $result = $dbc->query($query);
 
 if ($dbc-->query($sql) === TRUE) {
