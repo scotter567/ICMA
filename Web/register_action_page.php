@@ -2,6 +2,7 @@
 //placeholders for variables
 //import (../helpers.php);
 
+
 $username = $_POST["username"];
 $f_name = $_POST["name_first"];
 $l_name = $_POST["name_last"];
@@ -17,13 +18,14 @@ $dbc = mysqli_connect('localhost', 'user_web', 'jawnskie2', 'investment_club_dbs
 	
 $query = "INSERT INTO user (username, name_first, name_last, password_str, email_address, phone, dob, account_value)
 									VALUES (".$username.", ".$f_name.", ".$l_name.", ".$passwrd.", ".$email.", ".$phone.", ".$dob.", ".$acc_val.")";
-$result = $dbc->query($query);
+$response = @mysqli_query($dbc, $query);
 
-if ($dbc->query($query) === TRUE) {
+if (mysqli_query($dbc, $query) === TRUE) {
     echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $dbc . "<br>" . $dbc->error;
 }
 
-$dbc->close();
+mysqli_close($dbc);
+
 ?>
