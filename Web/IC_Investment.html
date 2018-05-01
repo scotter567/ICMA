@@ -72,7 +72,7 @@ input[type=submit]:hover {
 
 
 <div class="container">
-  <form action="/action_page.php">
+  <form action="/investment_action.php" method = "post">
     <div class="row">
       <div class="col-25">
         <label for="fname">Buy-In Date</label>
@@ -92,7 +92,7 @@ input[type=submit]:hover {
   
     <div class="row">
       <div class="col-25">
-        <label for="country">Company</label>
+        <label for="company">Company</label>
       </div>
       <div class="col-75">
         <select id="country" name="country">
@@ -109,14 +109,14 @@ input[type=submit]:hover {
         <label for="fname">Company Symbol</label>
       </div>
       <div class="col-75">
-        <input type="text" name="buy_in_date" placeholder="Buy in date..">
+        <input type="text" name="comp_sym" placeholder="Symbol">
       </div>
     </div>
 <div class="container">Mutual Fund
   <input type="checkbox" checked="checked">
   <span class="checkmark"></span>
 </label>
-<div class="row">
+	<div class="row">
       <div class="col-25">
         <label for="subject">Mutual Fund Name</label>
       </div>
@@ -134,6 +134,8 @@ input[type=submit]:hover {
       <input type="submit" value="Submit">
     </div>
   </form>
+  
+  
 </div>
 
 </body>
