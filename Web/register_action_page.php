@@ -10,7 +10,7 @@ $dob = $_POST["dob"];
 $acc_val = $_POST["account_value"];
 
 
-$dbc = mysqli_connect('localhost', 'trey', 'poop', 'investment_club_dbs')
+$dbc = mysqli_connect('localhost', 'user_web', 'jawnskie2', 'investment_club_dbs')
     or die('Could not connect: ' . mysqli_connect_error());
 	
 $query = "INSERT INTO users (username, name_first, name_last, password_str, email_address, phone, dob, account_value)

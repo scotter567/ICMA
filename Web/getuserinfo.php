@@ -1,9 +1,7 @@
 <?php
 include '../helpers.php';
-
 $query = "SELECT username, name_first, name_last, email_address, phone, dob FROM users";
 $response = @mysqli_query($dbc, $query);
-
 if($response){
 	
 	echo '<table align= "left"
@@ -35,6 +33,5 @@ echo '</table>';
 	echo mysqli_error($dbc);
 	
 }
-
 mysqli_close($dbc);
 ?>
