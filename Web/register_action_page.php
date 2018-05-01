@@ -1,7 +1,4 @@
 <?php
-//placeholders for variables
-//import (./helpers.php);
-
 
 $username = $_POST["username"];
 $f_name = $_POST["name_first"];

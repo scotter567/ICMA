@@ -16,7 +16,7 @@ account_value decimal(10,2) not null default 0.00
 
 );
 
-create table investments(
+create table owned_investments(
 
 investment_id int primary key auto_increment,
 owner_id int not null,
@@ -31,5 +31,22 @@ number_of_shares int not null default 0
 
 );
 
+create table investments(
+	symbol varchar(3) primary key,
+	company varchar(25) not null,
+	mutual_fund bool default false,
+	mutual_fund_name varchar(255) default null,
+	market_value decimal(10,2) not null default 0.00
+)
+
 INSERT INTO users
-VALUES(NULL,'scotter567','Jordan', 'Scott','hibob','scotter567@gmail.com','267-804-0464','1997-01-21',0);
+VALUES(NULL,'scotter567','Jordan', 'Scott','hibob','scotter567@gmail.com','2678040464','1997-01-21',0);
+
+INSERT INTO users
+VALUES(NULL,'tridley','Trey', 'Ridley','tridley','treyridley97@gmail.com','2024456969','1997-10-14',0);
+
+INSERT INTO users
+VALUES(NULL,'bobjoe','Bob', 'Scott','hibob','bob987@gmail.com','2678746464','2007-01-31',0);
+
+INSERT INTO users
+VALUES(NULL,'suetheboss','Susan', 'Turner','suethebest','suerules@gmail.com','3258440474','1999-11-11',0);
